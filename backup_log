@@ -1,0 +1,1081 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0x56091e20
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.5.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: ecdh-sha2-nistp256, ecdh-sha2-nistp384, ecdh-sha2-nistp521, diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1
+DEBUG:paramiko.transport:server key: rsa-sha2-512, rsa-sha2-256, ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-gcm, aes256-gcm, aes128-ctr, aes192-ctr, aes256-ctr
+DEBUG:paramiko.transport:server encrypt: aes128-gcm, aes256-gcm, aes128-ctr, aes192-ctr, aes256-ctr
+DEBUG:paramiko.transport:client mac: hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: ecdh-sha2-nistp256
+DEBUG:paramiko.transport:HostKey: rsa-sha2-512
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha2-256
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.17.57.240: b'108255a499d2e5a09ae066539b161ccb'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: test bannercisco-ce3650-17-57-240>
+cisco-ce3650-17-57-240>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: terminal 
+DEBUG:netmiko:read_channel: width 51
+DEBUG:netmiko:read_channel: 1
+cisco-ce3650-17-57-240>
+DEBUG:netmiko:Pattern found: (terminal width 511) test bannercisco-ce3650-17-57-240>
+cisco-ce3650-17-57-240>terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ter
+DEBUG:netmiko:read_channel: minal 
+DEBUG:netmiko:read_channel: length
+DEBUG:netmiko:read_channel:  0
+cisco-ce3650-17-57-240>
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+cisco-ce3650-17-57-240>terminal length 0
+DEBUG:netmiko:
+cisco-ce3650-17-57-240>terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: cisco-ce3650-17-57-240>
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+cisco-ce3650-17-57-240>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is cisco-ce3650-17-57-240>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-240>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is cisco-ce3650-17-57-240>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: cisco-ce3650-17-57-240>
+DEBUG:netmiko:Pattern found: (cisco\-ce3650\-17\-.*) 
+cisco-ce3650-17-57-240>
+DEBUG:netmiko:write_channel: b'enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: enable
+
+DEBUG:netmiko:Pattern found: (enable) enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: Password: 
+DEBUG:netmiko:Pattern found: ((?:cisco\-ce3650\-17\-|ssword)) 
+Password
+DEBUG:netmiko:write_channel: b'********\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:Pattern found: (cisco\-ce3650\-17\-) : 
+cisco-ce3650-17-
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:Pattern found: (cisco\-ce3650\-17\-.*) 57-240#
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:write_channel: b'wr mem\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: wr
+DEBUG:netmiko:read_channel:  m
+DEBUG:netmiko:read_channel: em
+
+DEBUG:netmiko:Pattern found: (wr\ mem) wr mem
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: Building configuration...
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: [OK]
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:Pattern found: ([>#]) 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: con
+DEBUG:netmiko:read_channel: figure 
+DEBUG:netmiko:read_channel: termina
+DEBUG:netmiko:read_channel: l
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:Pattern found: (configure\ terminal) configure terminal
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: (cisco\-ce3650\-17\-.*) 
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:write_channel: b'file prompt quiet\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: f
+DEBUG:netmiko:read_channel: ile pr
+DEBUG:netmiko:read_channel: ompt
+DEBUG:netmiko:read_channel:  quiet
+
+DEBUG:netmiko:Pattern found: (file\ prompt\ quiet) file prompt quiet
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:Pattern found: ((?:cisco\-ce3650\-17\-.*$|#.*$)) 
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:write_channel: b'ip tftp blocksize 512\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ip tftp 
+DEBUG:netmiko:read_channel: blocks
+DEBUG:netmiko:read_channel: ize 51
+DEBUG:netmiko:read_channel: 2
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:Pattern found: (ip\ tftp\ blocksize\ 512) ip tftp blocksize 512
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:cisco\-ce3650\-17\-.*$|#.*$)) 
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+cisco-ce3650-17-57-2(config)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: en
+DEBUG:netmiko:read_channel: d
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: (#.*) 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:Pattern found: ([>#]) 
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:exit_config_mode: end
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+cisco-ce3650-17-57-2(config)#file prompt quiet
+cisco-ce3650-17-57-2(config)#ip tftp blocksize 512
+cisco-ce3650-17-57-2(config)#end
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:write_channel: b'copy run tftp://10.36.50.60/\n'
+DEBUG:netmiko:read_channel: copy run tftp://10.36.50.60/
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: !
+DEBUG:netmiko:read_channel: !
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+33305 bytes copied in 3.284 secs (10142 bytes/sec)
+cisco-ce3650-17-57-240#
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:Pattern found: ([>#]) !!
+33305 bytes copied in 3.284 secs (10142 bytes/sec)
+cisco-ce3650-17-57-240#
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x547df340
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.5.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: ecdh-sha2-nistp256, ecdh-sha2-nistp384, ecdh-sha2-nistp521, diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1
+DEBUG:paramiko.transport:server key: rsa-sha2-512, rsa-sha2-256, ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-gcm, aes256-gcm, aes128-ctr, aes192-ctr, aes256-ctr
+DEBUG:paramiko.transport:server encrypt: aes128-gcm, aes256-gcm, aes128-ctr, aes192-ctr, aes256-ctr
+DEBUG:paramiko.transport:client mac: hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: ecdh-sha2-nistp256
+DEBUG:paramiko.transport:HostKey: rsa-sha2-512
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha2-256
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.17.57.241: b'48b44227d4e869277b72de2e55ea628b'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: Z
+
+*****************************************
+*                                       *
+* HIS IS A TEST BANNER FOR THE TECHOPS  * 
+*     TEAM MEETING                      *
+*                                       *
+* ***************************************
+                                                          *
+      
+ce3650-17-57-241>
+ce3650-17-57-241>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: terminal
+DEBUG:netmiko:read_channel:  width 511
+
+DEBUG:netmiko:Pattern found: (terminal width 511) Z
+
+*****************************************
+*                                       *
+* HIS IS A TEST BANNER FOR THE TECHOPS  * 
+*     TEAM MEETING                      *
+*                                       *
+* ***************************************
+                                                          *
+      
+ce3650-17-57-241>
+ce3650-17-57-241>terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: ce3650-17-57-241>
+DEBUG:netmiko:read_channel: te
+DEBUG:netmiko:read_channel: rminal 
+DEBUG:netmiko:read_channel: length
+DEBUG:netmiko:read_channel:  0
+ce3650-17-57-241>
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+ce3650-17-57-241>terminal length 0
+DEBUG:netmiko:
+ce3650-17-57-241>terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241>
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+ce3650-17-57-241>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is ce3650-17-57-241>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is ce3650-17-57-241>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: ce3650-17-57-241>
+DEBUG:netmiko:Pattern found: (ce3650\-17\-57\-241.*) 
+ce3650-17-57-241>
+DEBUG:netmiko:write_channel: b'enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: en
+DEBUG:netmiko:read_channel: able
+
+DEBUG:netmiko:Pattern found: (enable) enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: Password: 
+DEBUG:netmiko:Pattern found: ((?:ce3650\-17\-57\-241|ssword)) 
+Password
+DEBUG:netmiko:write_channel: b'********\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241#
+DEBUG:netmiko:Pattern found: (ce3650\-17\-57\-241) : 
+ce3650-17-57-241
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241#
+DEBUG:netmiko:Pattern found: (ce3650\-17\-57\-241.*) #
+ce3650-17-57-241#
+DEBUG:netmiko:write_channel: b'wr mem\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: wr
+DEBUG:netmiko:read_channel:  mem
+
+DEBUG:netmiko:Pattern found: (wr\ mem) wr mem
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: Building configuration...
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: Compressed configuration from 22359 bytes to 8937 bytes[OK]
+ce3650-17-57-241#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce3650-17-57-241#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: configure
+DEBUG:netmiko:read_channel:  terminal
+DEBUG:netmiko:Pattern found: (configure\ terminal) configure terminal
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: Enter configuration commands, one per line.  End with CNTL/Z.
+ce3650-17-57-241(config)#
+DEBUG:netmiko:Pattern found: (ce3650\-17\-57\-241.*) 
+Enter configuration commands, one per line.  End with CNTL/Z.
+ce3650-17-57-241(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce3650-17-57-241(config)#
+DEBUG:netmiko:write_channel: b'file prompt quiet\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: file prom
+DEBUG:netmiko:read_channel: pt quiet
+
+DEBUG:netmiko:Pattern found: (file\ prompt\ quiet) file prompt quiet
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ce3650-17-57-241(config)#
+DEBUG:netmiko:Pattern found: ((?:ce3650\-17\-57\-241.*$|#.*$)) 
+ce3650-17-57-241(config)#
+DEBUG:netmiko:write_channel: b'ip tftp blocksize 512\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ip 
+DEBUG:netmiko:read_channel: tftp bl
+DEBUG:netmiko:read_channel: ocksiz
+DEBUG:netmiko:read_channel: e 512
+ce3650-17-57-241(config)#
+DEBUG:netmiko:Pattern found: (ip\ tftp\ blocksize\ 512) ip tftp blocksize 512
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:ce3650\-17\-57\-241.*$|#.*$)) 
+ce3650-17-57-241(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce3650-17-57-241(config)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: en
+DEBUG:netmiko:read_channel: d
+ce3650-17-57-241#
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: (#.*) 
+ce3650-17-57-241#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce3650-17-57-241#
+DEBUG:netmiko:exit_config_mode: end
+ce3650-17-57-241#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+ce3650-17-57-241(config)#file prompt quiet
+ce3650-17-57-241(config)#ip tftp blocksize 512
+ce3650-17-57-241(config)#end
+ce3650-17-57-241#
+DEBUG:netmiko:write_channel: b'copy run tftp://10.36.50.60/\n'
+DEBUG:netmiko:read_channel: copy run tftp://10.36.50.60/
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: !!
+24212 bytes copied in 1.963 secs (12334 bytes/sec)
+ce3650-17-57-241#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce3650-17-57-241#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce3650-17-57-241#
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x56091c40
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_3.5.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr
+DEBUG:paramiko.transport:client mac: hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha2-256
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.17.57.242: b'bb830eb8da538f7e5a1c2317c703bdfb'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:read_channel: 
+
+       *************************************************************
+       *         This is a UCL Cisco 93
+       
+       00-24P  switch             *
+       *                      Management
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce9300-17-57-242>
+ce9300-17-57-242>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: termina
+DEBUG:netmiko:read_channel: l width 5
+DEBUG:netmiko:read_channel: 11
+ce9300-17-57-242>
+DEBUG:netmiko:Pattern found: (terminal width 511) 
+
+       *************************************************************
+       *         This is a UCL Cisco 93
+       
+       00-24P  switch             *
+       *                      Management
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce9300-17-57-242>
+ce9300-17-57-242>terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: t
+DEBUG:netmiko:read_channel: ermina
+DEBUG:netmiko:read_channel: l lengt
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: h 0
+ce9300-17-57-242>
+DEBUG:netmiko:Pattern found: (terminal\ length\ 0) 
+ce9300-17-57-242>terminal length 0
+DEBUG:netmiko:
+ce9300-17-57-242>terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242>
+DEBUG:netmiko:
+Parenthesis found in pattern.
+
+pattern: (\#|>)
+
+
+This can be problemtic when used in read_until_pattern().
+
+You should ensure that you use either non-capture groups i.e. '(?:' or that the
+parenthesis completely wrap the pattern '(pattern)'
+DEBUG:netmiko:Pattern found: (\#|>) 
+ce9300-17-57-242>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is ce9300-17-57-242>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is ce9300-17-57-242>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242>
+DEBUG:netmiko:Pattern found: (ce9300\-17\-57\-242.*) 
+ce9300-17-57-242>
+DEBUG:netmiko:write_channel: b'enable\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: enable
+
+DEBUG:netmiko:Pattern found: (enable) enable
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: Password: 
+DEBUG:netmiko:Pattern found: ((?:ce9300\-17\-57\-242|ssword)) 
+Password
+DEBUG:netmiko:write_channel: b'********\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242#
+DEBUG:netmiko:Pattern found: (ce9300\-17\-57\-242) : 
+ce9300-17-57-242
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242#
+DEBUG:netmiko:Pattern found: (ce9300\-17\-57\-242.*) #
+ce9300-17-57-242#
+DEBUG:netmiko:write_channel: b'wr mem\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: wr 
+DEBUG:netmiko:read_channel: mem
+
+DEBUG:netmiko:Pattern found: (wr\ mem) wr mem
+DEBUG:netmiko:read_channel: Building configuration...
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: [OK]
+ce9300-17-57-242#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce9300-17-57-242#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: co
+DEBUG:netmiko:read_channel: nfigure
+DEBUG:netmiko:read_channel:  term
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: inal
+Enter configuration commands, one per line.  End with CNTL/Z.
+ce9300-17-57-242(config)#
+DEBUG:netmiko:Pattern found: (configure\ terminal) configure terminal
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: (ce9300\-17\-57\-242.*) 
+Enter configuration commands, one per line.  End with CNTL/Z.
+ce9300-17-57-242(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:write_channel: b'file prompt quiet\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: fi
+DEBUG:netmiko:read_channel: le promp
+DEBUG:netmiko:read_channel: t quiet
+ce9300-17-57-242(config)#
+DEBUG:netmiko:Pattern found: (file\ prompt\ quiet) file prompt quiet
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: ((?:ce9300\-17\-57\-242.*$|#.*$)) 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:write_channel: b'ip tftp blocksize 512\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: ip
+DEBUG:netmiko:read_channel:  tftp 
+DEBUG:netmiko:read_channel: blocksize 512
+DEBUG:netmiko:Pattern found: (ip\ tftp\ blocksize\ 512) ip tftp blocksize 512
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:Pattern found: ((?:ce9300\-17\-57\-242.*$|#.*$)) 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce9300-17-57-242(config)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: en
+DEBUG:netmiko:read_channel: d
+ce9300-17-57-242#
+DEBUG:netmiko:Pattern found: (end) end
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:Pattern found: (#.*) 
+ce9300-17-57-242#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce9300-17-57-242#
+DEBUG:netmiko:exit_config_mode: end
+ce9300-17-57-242#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+ce9300-17-57-242(config)#file prompt quiet
+ce9300-17-57-242(config)#ip tftp blocksize 512
+ce9300-17-57-242(config)#end
+ce9300-17-57-242#
+DEBUG:netmiko:write_channel: b'copy run tftp://10.36.50.60/\n'
+DEBUG:netmiko:read_channel: copy run tftp://10.36.50.60/
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: !!
+14334 bytes copied in 0.379 secs (37821 bytes/sec)
+ce9300-17-57-242#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+ce9300-17-57-242#
+DEBUG:netmiko:Pattern found: ([>#]) 
+ce9300-17-57-242#
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
